@@ -1,0 +1,7 @@
+{% extends"base.html" %}
+{% block content %}
+{% for user in users %}
+{{ user.id }}---{{ user.name }}
+    <br>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/apply" method="POST" accept-charset="UTF-8">
+    <label>
+        <input type="text" name="name" placeholder="姓名">
+    </label>
+    <br>
+    <label>
+        <input type="number" name="id" placeholder="学号">
+    </label>
+    <br>
+    <p>性别:
+        <label>
+            <input type="radio" name="sex" value="男"/>
+        </label>草
+        <label>
+            <input type="radio" name="sex" value="女"/>
+        </label>花
+    </p>
+    <p>
+        <label>
+            <input type="text" name="grade" placeholder="专业班级"/>
+        </label>
+        <br>
+        <label>
+            <input type="text" name="email" placeholder="邮箱" />
+        </label>
+        <br>
+        <label>
+            <input type="text" name="tel" placeholder="电话"/>
+        </label>
+    </p>
+    <p>想加入的小组:
+        <label>
+            <select name="choose_location">
+                <option value="客户端小组">客户端小组</option>
+                <option value="服务器小组">服务器小组</option>
+                <option value="嵌入式小组">嵌入式小组</option>
+                <option value="策宣小组">策宣小组</option>
+            </select>
+        </label>
+    </p>
+    <p>
+        <label>
+            <textarea name="introduce_yourself" placeholder="自我介绍(两百字以内)"></textarea>
+        </label>
+    </p>
+    <input style="width: 200px;height: 30px;color: #FF7F00" type="submit" value="提交">
+</form>
+{#    <p><a href="{{ url_for('name_list')}}">已报名人员名单</a></p>#}
+{% endblock %}

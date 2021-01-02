@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="Shortcut Icon" href="static/favicon.ico" >
+    <link rel="Bookmark" href="static/favicon.ico" >
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="https://v3.bootcss.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://v3.bootcss.com/examples/starter-template/starter-template.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <script src="https://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <title>皿心水</title>
+    <style type="text/css">
+        .btn-min{
+            width: 100px;
+            height: 30px;
+            color: #E8EFF0;
+            background: #444444;
+            text-decoration: none;
+            display: block;
+            line-height: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-family: "微软雅黑 Light",sans-serif;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center"><h1>欢迎来到皿心水个人网</h1></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('index') }}">皿心水</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="{{ url_for('index') }}">报名</a></li>
+              <li><a href="{{ url_for('login') }}">登录</a></li>
+              <li><a href="{{ url_for('name_list')}}">名单</a></li>
+              <li><a href="{{ url_for('todo') }}">待办</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div align="center">
+        {% block content %}
+        {% endblock %}
+        <br>
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=43030202001230" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                <img src="static/gonganbei.ico" style="float:left;"/>
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">湘公网安备 43030202001230号</p>
+            </a>
+            <a target="_blank" href="http://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">赣ICP备2020014228号</p>
+            </a>
+        </div>
+    </div>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://v3.bootcss.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

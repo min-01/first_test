@@ -1,0 +1,14 @@
+{% extends'base.html' %}
+{% block content %}
+    <form action="/add_todo" method="POST" accept-charset="UTF-8">
+        <input type="text" name="thing" style="height: 30px;width: 400px;" placeholder="待办事项" />
+        <input class="btn-min" type="submit" value="添加待办"/>
+    </form>
+    <h2>待办事项</h2>
+    {{ "待办" }}------------------{{ '时间' }}-------------------------------{{ '状态' }}
+    <br>
+    {% for thing in things %}
+        <div>{{ thing.thing }}-----------{{ thing.time }}--------------{{ thing.status }}</div>
+{#        </div><a class="btn-min" href="#">完成</a>#}
+    {% endfor %}
+{% endblock %}
